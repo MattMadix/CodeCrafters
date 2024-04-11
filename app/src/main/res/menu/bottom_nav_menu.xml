@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_weather"
+        android:icon="@drawable/baseline_cloud_24"
+        android:title="@string/title_weather" />
+
+    <item
+        android:id="@+id/navigation_daily"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_daily" />
+
+    <item
+        android:id="@+id/navigation_radar"
+        android:icon="@drawable/baseline_radar_24"
+        android:title="@string/title_radar" />
+
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/baseline_article_24"
+        android:title="@string/title_radar" />
+
+
+</menu>
