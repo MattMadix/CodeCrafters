@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_weather"
-        android:name="com.example.myapplication.ui.weather.WeatherFragment"
+        android:name="com.example.myapplication.ui.WeatherFragment"
         android:label="@string/title_weather"
         tools:layout="@layout/fragment_weather" />
 
     <fragment
         android:id="@+id/navigation_daily"
-        android:name="com.example.myapplication.ui.daily.DailyFragment"
+        android:name="com.example.myapplication.ui.DailyFragment"
         android:label="@string/title_daily"
         tools:layout="@layout/fragment_daily" />
 
     <fragment
         android:id="@+id/navigation_radar"
-        android:name="com.example.myapplication.ui.radar.RadarFragment"
+        android:name="com.example.myapplication.ui.RadarFragment"
         android:label="@string/title_radar"
         tools:layout="@layout/fragment_radar" />
 
     <fragment
         android:id="@+id/navigation_about"
-        android:name="com.example.myapplication.ui.about.AboutFragment"
+        android:name="com.example.myapplication.ui.AboutFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.radar
+package com.example.myapplication.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

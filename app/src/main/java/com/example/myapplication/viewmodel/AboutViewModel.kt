@@ -1,13 +1,13 @@
-package com.example.myapplication.ui.daily
+package com.example.myapplication.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DailyViewModel : ViewModel() {
+class AboutViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is daily Fragment"
+        value = "This is about Fragment"
     }
     val text: LiveData<String> = _text
 }

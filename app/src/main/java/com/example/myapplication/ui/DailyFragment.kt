@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.radar
+package com.example.myapplication.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.databinding.FragmentRadarBinding
+import com.example.myapplication.databinding.FragmentDailyBinding
+import com.example.myapplication.viewmodel.DailyViewModel
 
-class RadarFragment : Fragment() {
+class DailyFragment : Fragment() {
 
-    private var _binding: FragmentRadarBinding? = null
+    private var _binding: FragmentDailyBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +23,14 @@ class RadarFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(RadarViewModel::class.java)
+        val dailyViewModel =
+            ViewModelProvider(this).get(DailyViewModel::class.java)
 
-        _binding = FragmentRadarBinding.inflate(inflater, container, false)
+        _binding = FragmentDailyBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDaily
+        dailyViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.daily
+package com.example.myapplication.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.databinding.FragmentDailyBinding
+import com.example.myapplication.databinding.FragmentAboutBinding
+import com.example.myapplication.viewmodel.AboutViewModel
 
-class DailyFragment : Fragment() {
+class AboutFragment : Fragment() {
 
-    private var _binding: FragmentDailyBinding? = null
+    private var _binding: FragmentAboutBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +23,14 @@ class DailyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dailyViewModel =
-            ViewModelProvider(this).get(DailyViewModel::class.java)
+        val notificationsViewModel =
+            ViewModelProvider(this).get(AboutViewModel::class.java)
 
-        _binding = FragmentDailyBinding.inflate(inflater, container, false)
+        _binding = FragmentAboutBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDaily
-        dailyViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textAbout
+        notificationsViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
